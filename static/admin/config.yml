@@ -3,27 +3,53 @@ backend:
   repo: porfirioribeiro/quintadaspoesias
   branch: master
 
-media_folder: "static/files/images"
-public_folder: "/files/images"
+media_folder: 'static/files/images'
+public_folder: '/files/images'
 publish_mode: editorial_workflow
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
+      - { label: 'Language', name: 'language', widget: 'select', options: ['en', 'es', 'pt', 'br'] }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+  - name: 'brand'
+    label: 'Marca'
+    folder: 'src/pages/brand'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'brand-page' }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Logo', name: 'logo', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'product'
+    label: 'Produto'
+    folder: 'src/pages/product'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'brand-page' }
       - {
-          label: "Language",
-          name: "language",
-          widget: "select",
-          options: ["en", "es", "pt", "br"],
+          label: 'Marca',
+          name: 'brand',
+          widget: 'relation',
+          collection: 'brand',
+          searchFields: ['title'],
+          valueField: 'title',
+          displayFields: ['title'],
         }
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Imagem', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

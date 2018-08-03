@@ -1,8 +1,6 @@
 backend:
-  name: gitlab
+  name: github
   repo: porfirioribeiro/quintadaspoesias
-  # auth_type: implicit
-  # app_id: 4100b38ef02415307bc581c2a9b8deb95adbd53556b5cd76175fb556945e84ef
   branch: master
 
 media_folder: "static/files/images"

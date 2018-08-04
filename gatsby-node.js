@@ -14,3 +14,10 @@
 //     })
 //   }
 // }
+
+exports.createPages = ({ actions }) => {
+  const { createRedirect } = actions;
+  const redirectInBrowser = process.env.NODE_ENV === 'development';
+
+  createRedirect({ fromPath: `/admin`, toPath: '/admin/', redirectInBrowser, isPermanent: true });
+};

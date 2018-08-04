@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify',
     { resolve: 'gatsby-plugin-emotion', options: { hoist: false, autoLabel: true } },
     {
       resolve: 'gatsby-plugin-typography',

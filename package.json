@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
-    "netlify-cms": "^2.0.8",
+    "netlify-cms": "^2.0.9",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-emotion": "^9.2.6",
@@ -41,8 +41,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@types/react": "^16.4.7",
-    "prettier": "^1.13.7",
+    "@types/react": "^16.4.11",
+    "prettier": "^1.14.2",
     "webpack-bundle-analyzer": "^2.13.1"
   },
   "repository": {

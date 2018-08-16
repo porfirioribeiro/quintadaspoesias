@@ -1,29 +1,10 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
-import { rhythm } from '../utils/typography';
-
-import styled, { css } from 'react-emotion';
-
-const Link = styled(GatsbyLink)({
-  color: 'white',
-  textDecoration: 'none',
-});
-
-const Child = styled.span({
-  color: 'red',
-});
-
-const Cont = styled.div({
-  color: 'green',
-  [Child]: {
-    border: '1px solid red',
-  },
-});
 
 const Header = ({ siteTitle }) => (
   <div
     css={{
-      background: 'rebeccapurple',
+      background: 'white',
+      boxShadow: '0 2px 2px rgba(0,0,0,0.3)',
       marginBottom: '1.45rem',
     }}
   >
@@ -34,14 +15,7 @@ const Header = ({ siteTitle }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 css={{ margin: 0 }}>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-      <Cont>
-        hei
-        <Child>Hello</Child>
-      </Cont>
-      <Child>out</Child>
+      <h1 css={{ margin: 0 }}>{siteTitle}</h1>
     </div>
   </div>
 );

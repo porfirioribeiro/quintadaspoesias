@@ -35,8 +35,8 @@ class Layout extends React.Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Sample' },
-                { name: 'keywords', content: 'sample, something' },
+                { name: 'description', content: 'Produção e comércio de doces e licores' },
+                { name: 'keywords', content: 'doces, licores' },
               ]}
             />
             <Header siteTitle={data.site.siteMetadata.title} />

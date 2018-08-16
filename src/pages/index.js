@@ -1,15 +1,27 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div
+      css={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap',
+      }}
+    >
+      <img src={require('../images/QuintaDasPoesias.png')} alt="QuintaDasPoesias" />
+      <img src={require('../images/MonteAzul.png')} alt="MonteAzul" />
+      <img src={require('../images/WildCherry.png')} alt="WildCherry" />
+      <img src={require('../images/CasaPereira.png')} alt="CasaPereira" />
+    </div>
+    <p>Estamos a trabalhar para lhe trazer algo novo</p>
+    <p>
+      Entretanto poderá os contactar para o seguinte email:
+      <a href="mailto:quintadaspoesias.com">quintadaspoesias.com</a>
+    </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

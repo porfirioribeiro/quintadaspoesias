@@ -19,7 +19,7 @@ const IndexPage = () => (
     <p>Estamos a trabalhar para lhe trazer algo novo</p>
     <p>
       Entretanto poderá os contactar para o seguinte email:
-      <a href="mailto:quintadaspoesias.com">quintadaspoesias.com</a>
+      <a href="mailto:quintadaspoesias@gmail.com">quintadaspoesias@gmail.com</a>
     </p>
   </Layout>
 );

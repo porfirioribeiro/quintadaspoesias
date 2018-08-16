@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Quinta das Poesias',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

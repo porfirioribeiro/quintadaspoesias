@@ -1,7 +1,8 @@
 ---
 templateKey: homepage
-language: en
-title: Hello
+language: pt
+hero_title: Doces e licores tradicionais
+hero_text: Os melhores produtos feitos para si
 brands:
   - background: '#EEEEEE'
     description: 'Doces, mel, conservas, marmaladas...'

@@ -1,7 +1,8 @@
 ---
 templateKey: homepage
 language: en
-title: Hello
+hero_title: Tradicional jam's and liqueirs
+hero_text: The best products for you
 brands:
   - background: '#EEEEEE'
     description: 'Jam''s, honey, preserves, marmalades...'

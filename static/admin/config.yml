@@ -7,7 +7,7 @@ backend:
 media_folder: 'static/files/images'
 public_folder: '/files/images'
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 slug:
   encoding: 'ascii'

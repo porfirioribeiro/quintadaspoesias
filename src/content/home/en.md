@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: Quinta das Poesias
 templateKey: homepage
 language: en
 hero_title: Tradicional jam's and liqueirs

@@ -7,6 +7,11 @@ backend:
 media_folder: 'static/files/images'
 public_folder: '/files/images'
 
+# media_library:
+#  name: uploadcare
+#  config:
+#    publicKey: 9e65756a6ff697aa7892 # replace with your publickey, or use this just to test
+
 # publish_mode: editorial_workflow
 
 slug:
@@ -29,6 +34,16 @@ collections:
           default: 'en',
         }
       - { label: 'Title', name: 'title', widget: 'string' }
+
+      - label: 'Brands'
+        name: 'brands'
+        widget: 'list'
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Background Color, name: background, widget: string }
+          - { label: Logo, name: logo, widget: image }
+
   - name: 'blog'
     label: 'Blog'
     folder: 'src/content/blog'

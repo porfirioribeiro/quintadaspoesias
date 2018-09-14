@@ -25,6 +25,7 @@ collections:
     create: true
     slug: '{{language}}'
     fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'homepage' }
       - {
           label: 'Language',
@@ -44,6 +45,24 @@ collections:
           - { label: Description, name: description, widget: string }
           - { label: Background Color, name: background, widget: string }
           - { label: Logo, name: logo, widget: image }
+
+      - label: 'About'
+        name: 'about'
+        widget: 'object'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Text', name: 'body', widget: 'markdown' }
+      - label: 'Products'
+        name: 'products'
+        widget: 'object'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Text', name: 'body', widget: 'markdown' }
+      - label: 'Contact'
+        name: 'contact'
+        widget: 'object'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
 
   - name: 'blog'
     label: 'Blog'

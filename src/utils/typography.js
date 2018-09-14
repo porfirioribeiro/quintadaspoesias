@@ -2,7 +2,19 @@ import Typography from 'typography';
 import { MOBILE_MEDIA_QUERY, TABLET_MEDIA_QUERY } from 'typography-breakpoint-constants';
 
 const typography = new Typography({
-  baseFontSize: `18px`,
+  googleFonts: [
+    {
+      name: 'Pacifico',
+      styles: ['400'],
+    },
+    {
+      name: 'Ubuntu',
+      styles: ['400', '400i', '500', '500i', '700', '700i'],
+    },
+  ],
+  headerFontFamily: ['Ubuntu'],
+  bodyFontFamily: ['Ubuntu'],
+  baseFontSize: `16px`,
   baseLineHeight: 1.45,
   blockMarginBottom: 0.75,
   scaleRatio: 2.15,

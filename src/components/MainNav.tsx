@@ -66,7 +66,7 @@ interface MainNavState {
 const scrollHeight = 50;
 export default class MainNav extends React.Component<MainNavProps, MainNavState> {
   state = {
-    floating: (document.scrollingElement || document.body).scrollTop > scrollHeight,
+    floating: shouldFloat(),
   };
 
   componentDidMount() {
@@ -77,7 +77,7 @@ export default class MainNav extends React.Component<MainNavProps, MainNavState>
   }
 
   handleScroll = () => {
-    if ((document.scrollingElement || document.body).scrollTop > scrollHeight) {
+    if (shouldFloat()) {
       if (!this.state.floating) this.setState({ floating: true });
     } else if (this.state.floating) this.setState({ floating: false });
 
@@ -92,4 +92,10 @@ export default class MainNav extends React.Component<MainNavProps, MainNavState>
       </Header>
     );
   }
+}
+function shouldFloat() {
+  return (
+    (global as any).document &&
+    (document.scrollingElement || document.body).scrollTop > scrollHeight
+  );
 }

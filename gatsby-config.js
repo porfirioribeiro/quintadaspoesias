@@ -1,3 +1,4 @@
+const prod = process.env.NODE_ENV === 'production';
 module.exports = {
   siteMetadata: {
     title: 'Quinta das Poesias',
@@ -6,7 +7,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     'gatsby-plugin-typescript',
-    { resolve: 'gatsby-plugin-emotion', options: { hoist: false, autoLabel: true } },
+    { resolve: 'gatsby-plugin-emotion', options: { hoist: prod, autoLabel: true } },
     {
       resolve: 'gatsby-plugin-typography',
       options: {

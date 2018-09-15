@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, GatsbyLinkProps } from 'gatsby';
 import styled from '../utils/theme';
-import { css, cx } from 'emotion';
 import { LinkGetProps } from 'reach__router';
 
 const Header = styled.header<{ floating: boolean }>(({ floating, theme }) => ({
@@ -17,6 +16,9 @@ const Header = styled.header<{ floating: boolean }>(({ floating, theme }) => ({
   boxShadow: floating ? '0px 3px 45px rgba(0, 0, 0, 0.15);' : undefined,
   '& > nav': {
     justifySelf: 'flex-end',
+    [theme.mq('sm')]: {
+      display: 'none',
+    },
   },
 }));
 
@@ -42,16 +44,6 @@ export const NavLink = styled(Link)<GatsbyLinkProps<any>>(({ theme }) => ({
 NavLink.defaultProps = {
   getProps: ({ isCurrent, location, href }: LinkGetProps) =>
     isCurrent || location.pathname + location.hash === href ? { 'data-active': true } : {},
-  onClick: e => {
-    const href = e.currentTarget.getAttribute('href')!.replace(location.pathname, '');
-    console.log('href', href);
-    if (href.startsWith('#')) {
-      // e.preventDefault();
-      const element = document.getElementById(href.substr(1));
-      console.log('click', element);
-      if (element !== null) element.scrollIntoView({ behavior: 'smooth' });
-    }
-  },
 };
 
 interface MainNavProps {
@@ -84,7 +76,6 @@ export default class MainNav extends React.Component<MainNavProps, MainNavState>
     // console.log('scroll', (document.scrollingElement || document.body).scrollTop);
   };
   render() {
-    console.log('floating', this.state.floating);
     return (
       <Header floating={this.state.floating}>
         <Title to={this.props.titleTo}>Quinta das Poesias</Title>

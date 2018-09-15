@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import MainNav, { NavLink } from '../components/MainNav';
 import { Section } from '../components/Section';
+import { theme } from '../utils/theme';
 
 const HomePage = ({ data }) => {
   const {
@@ -59,7 +60,8 @@ const HomePage = ({ data }) => {
           justifyContent: 'space-around',
           flexWrap: 'wrap',
           position: 'relative',
-          maxWidth: 820,
+          maxWidth: theme.size.sectionMaxWidth,
+          padding: `0px ${theme.size.sectionMargin}px`,
           margin: '-150px auto 36px auto',
         }}
       >
@@ -70,7 +72,10 @@ const HomePage = ({ data }) => {
               background: '#FFFFFF',
               boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.12)',
               borderRadius: 8,
-              margin: '16px 4px',
+              margin: '16px 8px',
+              [theme.mq({ gt: 608, lt: 'md' })]: {
+                margin: '16px 6%',
+              },
             }}
           >
             <div
@@ -84,7 +89,15 @@ const HomePage = ({ data }) => {
               }}
               style={{ backgroundColor: brand.background, backgroundImage: `url(${brand.logo})` }}
             />
-            <div css={{ font: '10px Pacifico', lineHeight: '18px', margin: '8px 16px' }}>
+            <div
+              css={{
+                fontSize: '10px',
+                fontFamily: theme.fonts.special,
+                color: theme.colors.primary,
+                lineHeight: '18px',
+                margin: '8px 16px',
+              }}
+            >
               {brand.description}
             </div>
             <h4 css={{ margin: '8px 16px' }}>{brand.name}</h4>

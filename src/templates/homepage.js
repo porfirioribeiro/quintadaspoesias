@@ -1,21 +1,26 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import styled from 'react-emotion';
-
-const Section = styled('section')({
-  maxWidth: 920,
-  margin: '0 auto',
-  padding: '3% 50px',
-  h2: {
-    font: '40px Pacifico',
-  },
-});
+import MainNav, { NavLink } from '../components/MainNav';
+import { Section } from '../components/Section';
 
 const HomePage = ({ data }) => {
-  const { brands, hero_title, hero_text, about, products, contact } = data.page.frontmatter;
+  const {
+    language,
+    brands,
+    hero_title,
+    hero_text,
+    about,
+    products,
+    contact,
+  } = data.page.frontmatter;
 
   return (
-    <div>
+    <React.Fragment>
+      <MainNav titleTo={`/${language}/`}>
+        <NavLink to={`/${language}/#about`}>{about.title}</NavLink>
+        <NavLink to={`/${language}/#products`}>{products.title}</NavLink>
+        <NavLink to={`/${language}/#contact`}>{contact.title}</NavLink>
+      </MainNav>
       <div
         css={{
           position: 'relative',
@@ -28,6 +33,7 @@ const HomePage = ({ data }) => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
+          textAlign: 'center',
           color: '#4C4C4C',
         }}
       >
@@ -41,7 +47,7 @@ const HomePage = ({ data }) => {
             bottom: 0,
             right: 0,
           }}
-          shape-rendering="geometric-precision"
+          shapeRendering="geometric-precision"
           viewBox="0 0 1000 438"
         >
           <path d="M 1000,438.7832 V 0 l -35.30273,268.75976 c -14.697,98.023 -65.27391,99.90352 -109.87891,104.72852 C 810.21336,378.31428 0,438.7832 0,438.7832 Z" />
@@ -51,6 +57,7 @@ const HomePage = ({ data }) => {
         css={{
           display: 'flex',
           justifyContent: 'space-around',
+          flexWrap: 'wrap',
           position: 'relative',
           maxWidth: 820,
           margin: '-150px auto 36px auto',
@@ -63,6 +70,7 @@ const HomePage = ({ data }) => {
               background: '#FFFFFF',
               boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.12)',
               borderRadius: 8,
+              margin: '16px 4px',
             }}
           >
             <div
@@ -83,23 +91,32 @@ const HomePage = ({ data }) => {
           </div>
         ))}
       </div>
-      <Section>
+      <Section id="about">
         <h2>{about.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: about.body }} />
       </Section>
-      <Section>
-        <h2>{products.title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: products.body }} />
-      </Section>
-      <Section>
+      <div css={{ backgroundColor: '#DEECC1', display: 'flex' }}>
+        <Section id="products">
+          <h2>{products.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: products.body }} />
+        </Section>
+      </div>
+      <Section id="contact">
         <h2>{contact.title}</h2>
       </Section>
-      <div>
+      <footer
+        css={{
+          height: 250,
+        }}
+      >
         {data.translations.edges.map(({ node }) => (
-          <Link to={node.fields.path}> {node.frontmatter.language} </Link>
+          <Link key={node.frontmatter.language} to={node.fields.path}>
+            {' '}
+            {node.frontmatter.language}{' '}
+          </Link>
         ))}
-      </div>
-    </div>
+      </footer>
+    </React.Fragment>
   );
 };
 

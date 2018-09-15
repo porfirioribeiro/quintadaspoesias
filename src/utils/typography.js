@@ -13,7 +13,9 @@ const typography = new Typography({
     },
   ],
   headerFontFamily: ['Ubuntu'],
+  headerColor: '#4C4C4C',
   bodyFontFamily: ['Ubuntu'],
+  bodyColor: '#4C4C4C',
   baseFontSize: `16px`,
   baseLineHeight: 1.45,
   blockMarginBottom: 0.75,
@@ -34,5 +36,5 @@ const typography = new Typography({
   }),
 });
 
-export const { rhythm, scale } = typography;
+export const { rhythm, scale, options } = typography;
 export default typography;

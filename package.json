@@ -6,6 +6,7 @@
   "dependencies": {
     "emotion": "^9.2.8",
     "emotion-server": "^9.2.8",
+    "emotion-theming": "^9.2.6",
     "gatsby": "next",
     "gatsby-plugin-emotion": "next",
     "gatsby-plugin-netlify": "next",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
+    "@types/typography": "^0.16.0",
     "prettier": "^1.14.2",
     "webpack-bundle-analyzer": "^3.0.2"
   },

@@ -1,0 +1,16 @@
+.brand {
+  color: red;
+  display: inline-block;
+  border: solid 1px #dddddd;
+  border-radius: 100%;
+  padding: 0.65em;
+  margin: 0 0 2em 0;
+  & img {
+    display: block;
+    width: 198px;
+    height: 198px;
+  }
+}
+a.brand:hover {
+  border: solid 1px #dddda8;
+}

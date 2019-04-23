@@ -39,7 +39,7 @@
       padding: 0;
       vertical-align: middle;
 
-      a {
+      .nav_link {
         transition: font-size #{_duration(transition)} ease;
         display: inline-block;
         height: 2.25em;
@@ -59,7 +59,7 @@
         // }
       }
       &.is-active {
-        a {
+        .nav_link {
           background-color: _palette(invert, bg);
           box-shadow: none;
         }
@@ -80,7 +80,7 @@
       li {
         margin: 0 0.175em;
 
-        a {
+        .nav_link {
           font-size: 0.9em;
         }
       }

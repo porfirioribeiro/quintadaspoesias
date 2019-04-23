@@ -5,33 +5,38 @@ import Scroll from './Scroll';
 const Nav = props => (
   <nav id="nav" className={props.sticky ? 'alt' : ''}>
     <Scrollspy
-      items={['jams', 'jampacks', 'second', 'cta']}
+      items={['jams', 'jampacks', 'pots', 'marmalades', 'cta', 'other-brands']}
       currentClassName="is-active"
       offset={-300}
     >
       <li>
         <Scroll type="id" element="jams">
-          <a href="#">Doces tradicionais</a>
+          <span className="nav_link">Doces tradicionais</span>
         </Scroll>
       </li>
       <li>
         <Scroll type="id" element="jampacks">
-          <a href="#">Conjuntos</a>
+          <span className="nav_link">Conjuntos</span>
         </Scroll>
       </li>
       <li>
-        <Scroll type="id" element="second">
-          <a href="#">Second Section</a>
+        <Scroll type="id" element="pots">
+          <span className="nav_link">Mel &amp; Frutos em calda</span>
+        </Scroll>
+      </li>
+      <li>
+        <Scroll type="id" element="marmalades">
+          <span className="nav_link">Marmeladas</span>
         </Scroll>
       </li>
       <li>
         <Scroll type="id" element="cta">
-          <a href="#">Get Started</a>
+          <span className="nav_link">Get Started</span>
         </Scroll>
       </li>
       <li>
         <Scroll type="id" element="other-brands">
-          <a href="#">Outras Marcas</a>
+          <span className="nav_link">Outras Marcas</span>
         </Scroll>
       </li>
     </Scrollspy>

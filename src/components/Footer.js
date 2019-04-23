@@ -22,29 +22,37 @@ const Footer = props => (
       </ul>
     </section>
     <section>
-      <h2>Etiam feugiat</h2>
+      <h2>Contactos</h2>
       <dl className="alt">
-        <dt>Address</dt>
-        <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-        <dt>Phone</dt>
-        <dd>(000) 000-0000 x 0000</dd>
+        <dt>Morada</dt>
+        <dd>
+          Rua Vale da Rosa, nº 9 Ardido &bull; 2460-817 Turquel &bull; Alcobaça
+          &bull; Portugal
+        </dd>
+        <dt>Telefone</dt>
+        <dd>+351 918115638</dd>
         <dt>Email</dt>
         <dd>
-          <a href="#">information@untitled.tld</a>
+          <a href="mailto:quintadaspoesias@gmail.com">
+            quintadaspoesias@gmail.com
+          </a>
         </dd>
       </dl>
       <ul className="icons">
-        <li>
+        {/* <li>
           <a href="#" className="icon fa-twitter alt">
             <span className="label">Twitter</span>
           </a>
-        </li>
+        </li> */}
         <li>
-          <a href="#" className="icon fa-facebook alt">
+          <a
+            href="https://facebook.com/quintadaspoesias"
+            className="icon fa-facebook alt"
+          >
             <span className="label">Facebook</span>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#" className="icon fa-instagram alt">
             <span className="label">Instagram</span>
           </a>
@@ -58,12 +66,10 @@ const Footer = props => (
           <a href="#" className="icon fa-dribbble alt">
             <span className="label">Dribbble</span>
           </a>
-        </li>
+        </li> */}
       </ul>
     </section>
-    <p className="copyright">
-      &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-    </p>
+    <p className="copyright">&copy; 2019 Quinta das Poesias</p>
   </footer>
 );
 

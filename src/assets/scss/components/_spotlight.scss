@@ -23,6 +23,14 @@
     }
   }
 
+  .spotlight_slider_control {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
+    color: white;
+  }
+
   .image {
     display: inline-block;
     margin-left: 4em;

@@ -2,16 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Waypoint } from 'react-waypoint';
-import Carousel from 'nuka-carousel';
 
 import Layout from '../components/layout';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
-import pic01 from '../assets/images/pic01.jpg';
+import slideJam01 from '../assets/images/doces-qp/slide-1.png';
+import slideJam02 from '../assets/images/doces-qp/slide-2.png';
+import slideJam03 from '../assets/images/doces-qp/slide-3.png';
+import slideJam04 from '../assets/images/doces-qp/slide-4.png';
+import slidePack01 from '../assets/images/pack-qp/slide01.png';
+import slidePack02 from '../assets/images/pack-qp/slide02.png';
+import slidePack03 from '../assets/images/pack-qp/slide03.png';
+import slidePack04 from '../assets/images/pack-qp/slide04.png';
 
 import LogoWildCherry from '../assets/images/LogoWildCherry.svg';
 import LogoMonteAzul from '../assets/images/LogoMonteAzul.svg';
 import LogoCasaPereira from '../assets/images/LogoCasaPereira.svg';
+import PicSlider from '../components/PicSlider';
 
 export default function Index() {
   const [stickyNav, setStickyNav] = useState(false);
@@ -37,50 +44,60 @@ export default function Index() {
       <Nav sticky={stickyNav} />
 
       <div id="main">
-        <section id="intro" className="main">
+        <section id="jams" className="main">
           <div className="spotlight">
-            <div className="content">
+            <div className="spotlight_content">
               <header className="major">
                 <h2>Doces tradicionais</h2>
               </header>
-              <p>
-                Sed lorem ipsum dolor sit amet nullam consequat feugiat
-                consequat magna adipiscing magna etiam amet veroeros. Lorem
-                ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum
-                dolor sit amet aliquam.
-              </p>
-              <ul className="actions">
+              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">
                     Learn More
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
-            <span style={{ width: '50%', minWidth: '300px' }}>
-              {/* <img src={pic01} alt="" /> */}
-              <Carousel
-                slidesToShow={2}
-                // withoutControls
-                autoplay
-                wrapAround
-                renderBottomCenterControls={null}
-              >
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide1" />
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide2" />
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide3" />
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide4" />
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide5" />
-                <img src="http://placehold.it/1000x400/ffff00/c0392b/&text=slide6" />
-              </Carousel>
-            </span>
+            <PicSlider>
+              <img src={slideJam01} />
+              <img src={slideJam02} />
+              <img src={slideJam03} />
+              <img src={slideJam04} />
+              <img src={slideJam01} />
+              <img src={slideJam02} />
+              <img src={slideJam03} />
+              <img src={slideJam04} />
+            </PicSlider>
           </div>
         </section>
 
-        <section id="first" className="main special">
-          <header className="major">
-            <h2>Primeiro conteudo</h2>
-          </header>
+        <section id="jampacks" className="main">
+          <div className="spotlight">
+            <div className="spotlight_content">
+              <header className="major">
+                <h2>Conjuntos</h2>
+              </header>
+              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              {/* <ul className="actions">
+                <li>
+                  <Link to="/generic" className="button">
+                    Learn More
+                  </Link>
+                </li>
+              </ul> */}
+            </div>
+            <PicSlider slidesToShow={1}>
+              <img src={slidePack01} />
+              <img src={slidePack02} />
+              <img src={slidePack03} />
+              <img src={slidePack04} />
+              <img src={slidePack01} />
+              <img src={slidePack02} />
+              <img src={slidePack03} />
+              <img src={slidePack04} />
+            </PicSlider>
+          </div>
         </section>
 
         <section id="second" className="main special">
@@ -139,23 +156,19 @@ export default function Index() {
 
         <section id="cta" className="main special">
           <header className="major">
-            <h2>Congue imperdiet</h2>
+            <h2>Onde comprar?</h2>
             <p>
-              Donec imperdiet consequat consequat. Suspendisse feugiat congue
+              Os nossos produtos poderam ser encontrados em diversos
+              supermercados e lojas
               <br />
-              posuere. Nulla massa urna, fermentum eget quam aliquet.
+              por todo o país.
             </p>
           </header>
           <footer className="major">
             <ul className="actions">
               <li>
                 <Link to="/generic" className="button special">
-                  Get Started
-                </Link>
-              </li>
-              <li>
-                <Link to="/generic" className="button">
-                  Learn More
+                  Encontre um revendedor
                 </Link>
               </li>
             </ul>

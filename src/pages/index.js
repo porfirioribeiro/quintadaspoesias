@@ -6,26 +6,14 @@ import { Waypoint } from 'react-waypoint';
 import Layout from '../components/layout';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
-import slideJam01 from '../assets/images/doces-qp/slide-1.png';
-import slideJam02 from '../assets/images/doces-qp/slide-2.png';
-import slideJam03 from '../assets/images/doces-qp/slide-3.png';
-import slideJam04 from '../assets/images/doces-qp/slide-4.png';
-import slidePack01 from '../assets/images/pack-qp/slide01.png';
-import slidePack02 from '../assets/images/pack-qp/slide02.png';
-import slidePack03 from '../assets/images/pack-qp/slide03.png';
-import slidePack04 from '../assets/images/pack-qp/slide04.png';
-import slidePot01 from '../assets/images/pots-qp/slide01.png';
-import slidePot02 from '../assets/images/pots-qp/slide02.png';
-import slidePot03 from '../assets/images/pots-qp/slide03.png';
-import slideMarm01 from '../assets/images/marm-qp/slide01.png';
-import slideMarm02 from '../assets/images/marm-qp/slide02.png';
-import slideMarm03 from '../assets/images/marm-qp/slide03.png';
-import slideMarm04 from '../assets/images/marm-qp/slide04.png';
 
 import LogoWildCherry from '../assets/images/LogoWildCherry.svg';
 import LogoMonteAzul from '../assets/images/LogoMonteAzul.svg';
 import LogoCasaPereira from '../assets/images/LogoCasaPereira.svg';
-import PicSlider from '../components/PicSlider';
+import { JamHomeSlider } from '../components/sliders/JamSlider';
+import { PackHomeSlider } from '../components/sliders/PackHomeSlider';
+import { PotHomeSlider } from '../components/sliders/PotHomeSlider';
+import { MarmHomeSlider } from '../components/sliders/MarmHomeSlider';
 
 export default function Index() {
   const [stickyNav, setStickyNav] = useState(false);
@@ -44,10 +32,7 @@ export default function Index() {
 
       <Header />
 
-      <Waypoint
-        onEnter={() => setStickyNav(false)}
-        onLeave={() => setStickyNav(true)}
-      />
+      <Waypoint onEnter={() => setStickyNav(false)} onLeave={() => setStickyNav(true)} />
       <Nav sticky={stickyNav} />
 
       <div id="main">
@@ -66,16 +51,7 @@ export default function Index() {
                 </li>
               </ul> */}
             </div>
-            <PicSlider>
-              <img src={slideJam01} />
-              <img src={slideJam02} />
-              <img src={slideJam03} />
-              <img src={slideJam04} />
-              <img src={slideJam01} />
-              <img src={slideJam02} />
-              <img src={slideJam03} />
-              <img src={slideJam04} />
-            </PicSlider>
+            <JamHomeSlider />
           </div>
         </section>
 
@@ -94,16 +70,7 @@ export default function Index() {
                 </li>
               </ul> */}
             </div>
-            <PicSlider slidesToShow={1}>
-              <img src={slidePack01} />
-              <img src={slidePack02} />
-              <img src={slidePack03} />
-              <img src={slidePack04} />
-              <img src={slidePack01} />
-              <img src={slidePack02} />
-              <img src={slidePack03} />
-              <img src={slidePack04} />
-            </PicSlider>
+            <PackHomeSlider />
           </div>
         </section>
 
@@ -122,17 +89,7 @@ export default function Index() {
                 </li>
               </ul> */}
             </div>
-            <PicSlider slidesToShow={3}>
-              <img src={slidePot01} />
-              <img src={slidePot02} />
-              <img src={slidePot03} />
-              <img src={slidePot01} />
-              <img src={slidePot02} />
-              <img src={slidePot03} />
-              <img src={slidePot01} />
-              <img src={slidePot02} />
-              <img src={slidePot03} />
-            </PicSlider>
+            <PotHomeSlider />
           </div>
         </section>
 
@@ -151,16 +108,7 @@ export default function Index() {
                 </li>
               </ul> */}
             </div>
-            <PicSlider slidesToShow={2}>
-              <img src={slideMarm01} />
-              <img src={slideMarm02} />
-              <img src={slideMarm03} />
-              <img src={slideMarm04} />
-              <img src={slideMarm01} />
-              <img src={slideMarm02} />
-              <img src={slideMarm03} />
-              <img src={slideMarm04} />
-            </PicSlider>
+            <MarmHomeSlider />
           </div>
         </section>
 
@@ -168,8 +116,7 @@ export default function Index() {
           <header className="major">
             <h2>Onde comprar?</h2>
             <p>
-              Os nossos produtos poderam ser encontrados em diversos
-              supermercados e lojas
+              Os nossos produtos poderam ser encontrados em diversos supermercados e lojas
               <br />
               por todo o país.
             </p>
@@ -196,8 +143,8 @@ export default function Index() {
               </span>
               <h3>Monte Azul</h3>
               <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                consequat tempus veroeros sed consequat.
+                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
+                veroeros sed consequat.
               </p>
             </li>
             <li>
@@ -206,8 +153,8 @@ export default function Index() {
               </span>
               <h3>Casa Pereira</h3>
               <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                consequat tempus veroeros sed consequat.
+                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
+                veroeros sed consequat.
               </p>
             </li>
             <li>
@@ -216,8 +163,8 @@ export default function Index() {
               </Link>
               <h3>Wild Cherry</h3>
               <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                consequat tempus veroeros sed consequat.
+                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
+                veroeros sed consequat.
               </p>
             </li>
           </ul>

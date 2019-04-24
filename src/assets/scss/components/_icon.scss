@@ -8,8 +8,7 @@
 
 .icon {
   @include icon;
-  transition: background-color #{_duration(transition)} ease-in-out,
-    color #{_duration(transition)} ease-in-out;
+  transition: background-color #{_duration(transition)} ease-in-out, color #{_duration(transition)} ease-in-out;
   border-bottom: none;
   position: relative;
 
@@ -42,13 +41,12 @@
     border: solid 1px;
     border-radius: 100%;
 
-    &:before {
+    & svg {
       display: block;
-      font-size: 1.25em;
-      width: 2em;
-      height: 2em;
+      width: 1.2em;
+      height: 1.2em;
       text-align: center;
-      line-height: 2em;
+      margin: 0.6em;
     }
   }
 

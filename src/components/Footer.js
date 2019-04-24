@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import logo from '../assets/images/logo.svg';
+import { FaFacebookF } from 'react-icons/fa';
 
 const Footer = props => (
   <footer id="footer">
     <section>
       <h2>Aliquam sed mauris</h2>
       <p>
-        Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat
-        magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras
-        aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae
-        tincidunt odio.
+        Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus
+        etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin,
+        ligula erat egestas velit, vitae tincidunt odio.
       </p>
       <ul className="actions">
         <li>
@@ -26,16 +25,13 @@ const Footer = props => (
       <dl className="alt">
         <dt>Morada</dt>
         <dd>
-          Rua Vale da Rosa, nº 9 Ardido &bull; 2460-817 Turquel &bull; Alcobaça
-          &bull; Portugal
+          Rua Vale da Rosa, nº 9 Ardido &bull; 2460-817 Turquel &bull; Alcobaça &bull; Portugal
         </dd>
         <dt>Telefone</dt>
         <dd>+351 918115638</dd>
         <dt>Email</dt>
         <dd>
-          <a href="mailto:quintadaspoesias@gmail.com">
-            quintadaspoesias@gmail.com
-          </a>
+          <a href="mailto:quintadaspoesias@gmail.com">quintadaspoesias@gmail.com</a>
         </dd>
       </dl>
       <ul className="icons">
@@ -45,11 +41,9 @@ const Footer = props => (
           </a>
         </li> */}
         <li>
-          <a
-            href="https://facebook.com/quintadaspoesias"
-            className="icon fa-facebook alt"
-          >
-            <span className="label">Facebook</span>
+          <a href="https://facebook.com/quintadaspoesias" className="icon">
+            <FaFacebookF />
+            {/* <span className="label">Facebook</span> */}
           </a>
         </li>
         {/* <li>

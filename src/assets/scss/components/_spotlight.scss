@@ -27,6 +27,13 @@
   .spotlight_description {
   }
 
+  .spotlight_flavors,
+  .spotlight_sizes {
+    > svg {
+      margin-right: 8px;
+    }
+  }
+
   .spotlight_flavors {
     margin-bottom: 0;
     font-size: 14px;

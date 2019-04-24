@@ -15,7 +15,7 @@ export function PackHomeSlider() {
             id
             name
             childImageSharp {
-              fixed(height: 250) {
+              fixed(height: 200) {
                 ...GatsbyImageSharpFixed
               }
             }

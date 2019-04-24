@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { Waypoint } from 'react-waypoint';
+import { FaBoxOpen, FaAppleAlt } from 'react-icons/fa';
 
 import Layout from '../components/layout';
 import Header from '../components/Header';
@@ -44,10 +45,14 @@ export default function Index() {
               </header>
               <p className="spotlight_description">Qualidade e tradição juntos com imenso sabor.</p>
               <p className="spotlight_flavors">
+                <FaAppleAlt />
                 Maçã, Gila, Figo, Melão, Laranja, Pêssego, Ameixa, Abóbora, Abóbora com noz,
                 Marmelo, Maçã Reineta, Pêra Rocha, Morango, Tomate
               </p>
-              <p className="spotlight_sizes">30g, 100g, 240g, 400g</p>
+              <p className="spotlight_sizes">
+                <FaBoxOpen />
+                30g, 100g, 240g, 400g
+              </p>
               {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">
@@ -66,7 +71,15 @@ export default function Index() {
               <header className="major">
                 <h2>Conjuntos</h2>
               </header>
-              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              <p className="spotlight_description">Conjuntos com diversos sabores de doces.</p>
+              <p className="spotlight_flavors">
+                <FaAppleAlt />
+                Diversos
+              </p>
+              <p className="spotlight_sizes">
+                <FaBoxOpen />
+                Caixa 6x30g, Caixa 4x100g, Caixa 2x240g, Galheteiro 2x100g
+              </p>
               {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">
@@ -85,7 +98,19 @@ export default function Index() {
               <header className="major">
                 <h2>Mel &amp; Frutos em calda</h2>
               </header>
-              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              <p className="spotlight_description">
+                Mel de nectar
+                <br />
+                Pêras em calda e Pêras Bêbedas
+              </p>
+              <p className="spotlight_flavors">
+                <FaAppleAlt />
+                Mel, Mel com Avelã, Pêras Bêbedas, Pêras em Calda
+              </p>
+              <p className="spotlight_sizes">
+                <FaBoxOpen />
+                400g
+              </p>
               {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">
@@ -104,7 +129,15 @@ export default function Index() {
               <header className="major">
                 <h2>Marmeladas</h2>
               </header>
-              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              <p className="spotlight_description">Marmeladas...</p>
+              <p className="spotlight_flavors">
+                <FaAppleAlt />
+                Marmelada de Marmelo, Marmelada de Maçã Reineta
+              </p>
+              <p className="spotlight_sizes">
+                <FaBoxOpen />
+                180g, 400g
+              </p>
               {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">
@@ -129,7 +162,7 @@ export default function Index() {
           <footer className="major">
             <ul className="actions">
               <li>
-                <Link to="/generic" className="button special">
+                <Link to="/generic" className="button special disabled" disabled>
                   Encontre um revendedor
                 </Link>
               </li>
@@ -147,30 +180,21 @@ export default function Index() {
                 <img src={LogoMonteAzul} alt="Logotipo Monte Azul" />
               </span>
               <h3>Monte Azul</h3>
-              <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
-                veroeros sed consequat.
-              </p>
+              <p>Doces de diversos sabores</p>
             </li>
             <li>
               <span className="brand">
                 <img src={LogoCasaPereira} alt="Logotipo Casa Pereira" />
               </span>
               <h3>Casa Pereira</h3>
-              <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
-                veroeros sed consequat.
-              </p>
+              <p>Doces e marmeladas de diversos sabores</p>
             </li>
             <li>
-              <Link to="/wildcherry" className="brand">
+              <span className="brand">
                 <img src={LogoWildCherry} alt="Logotipo Wild Cherry" />
-              </Link>
+              </span>
               <h3>Wild Cherry</h3>
-              <p>
-                Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus
-                veroeros sed consequat.
-              </p>
+              <p>Licor de Ginja tradicional de Alcobaça</p>
             </li>
           </ul>
           {/* <footer className="major">

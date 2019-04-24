@@ -1,24 +1,22 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
 import { FaFacebookF } from 'react-icons/fa';
 
 const Footer = props => (
   <footer id="footer">
     <section>
-      <h2>Aliquam sed mauris</h2>
+      <h2>Sobre nós</h2>
       <p>
-        Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus
-        etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin,
-        ligula erat egestas velit, vitae tincidunt odio.
+        A Quinta das Poesias dedica-se desde há muitos anos à produção de produtos tradicionais,
+        seguindo receitas antigas deixadas pelos seus antepassados. Doces, compotas, mel e licores
+        fazem parte do leque de produtos que produzimos e comercializamos.
       </p>
-      <ul className="actions">
+      {/* <ul className="actions">
         <li>
           <Link to="/generic" className="button">
             Learn More
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </section>
     <section>
       <h2>Contactos</h2>
@@ -41,7 +39,7 @@ const Footer = props => (
           </a>
         </li> */}
         <li>
-          <a href="https://facebook.com/quintadaspoesias" className="icon">
+          <a href="https://facebook.com/quintadaspoesias" className="icon alt">
             <FaFacebookF />
             {/* <span className="label">Facebook</span> */}
           </a>

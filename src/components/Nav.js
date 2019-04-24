@@ -31,7 +31,7 @@ const Nav = props => (
       </li>
       <li>
         <Scroll type="id" element="cta">
-          <span className="nav_link">Get Started</span>
+          <span className="nav_link">Onde comprar?</span>
         </Scroll>
       </li>
       <li>

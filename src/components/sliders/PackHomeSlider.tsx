@@ -8,7 +8,7 @@ export function PackHomeSlider() {
     {
       allFile(
         sort: { fields: name, order: ASC }
-        filter: { relativeDirectory: { eq: "packs-qp" } }
+        filter: { relativeDirectory: { eq: "pack-qp" } }
       ) {
         edges {
           node {

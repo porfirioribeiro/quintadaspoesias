@@ -6,11 +6,12 @@ import { FaArrowCircleLeft as ArrowLeft, FaArrowCircleRight as ArrowRight } from
 export default function PicSlider(props: PropsWithChildren<CarouselProps>) {
   return (
     <Carousel
-      style={{ width: '50%', minWidth: '300px' }}
-      slidesToShow={3}
+      slidesToShow={2}
       // transitionMode="scroll3d"
       autoplay
-      autoplayInterval={2000}
+      // disableAnimation
+      // autoplayInterval={2000}
+      // speed={1}
       pauseOnHover
       wrapAround
       renderBottomCenterControls={null}

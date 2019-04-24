@@ -42,7 +42,12 @@ export default function Index() {
               <header className="major">
                 <h2>Doces tradicionais</h2>
               </header>
-              <p>Qualidade e tradição juntos com imenso sabor.</p>
+              <p className="spotlight_description">Qualidade e tradição juntos com imenso sabor.</p>
+              <p className="spotlight_flavors">
+                Maçã, Gila, Figo, Melão, Laranja, Pêssego, Ameixa, Abóbora, Abóbora com noz,
+                Marmelo, Maçã Reineta, Pêra Rocha, Morango, Tomate
+              </p>
+              <p className="spotlight_sizes">30g, 100g, 240g, 400g</p>
               {/* <ul className="actions">
                 <li>
                   <Link to="/generic" className="button">

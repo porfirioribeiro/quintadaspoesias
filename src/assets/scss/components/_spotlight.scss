@@ -13,6 +13,7 @@
 
   .spotlight_content {
     flex: 1;
+    margin-right: 12px;
 
     > :last-child {
       margin-bottom: 0;
@@ -23,12 +24,33 @@
     }
   }
 
+  .spotlight_description {
+  }
+
+  .spotlight_flavors {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .spotlight_sizes {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
   .spotlight_slider_control {
     width: 32px;
     height: 32px;
     cursor: pointer;
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
     color: white;
+    user-select: none;
+    &:active {
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  .slider {
+    width: 50% !important;
   }
 
   .image {
@@ -45,6 +67,11 @@
     }
   }
 
+  li.slider-slide {
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.5));
+    transform: translateZ(0);
+  }
+
   @include breakpoint(medium) {
     flex-direction: column-reverse;
     text-align: center;
@@ -52,11 +79,16 @@
     .spotlight_content {
       flex: 0 1 auto;
       width: 100%;
+      margin-right: 0;
 
       header.major h2:after {
         margin-left: auto;
         margin-right: auto;
       }
+    }
+
+    .slider {
+      width: 100% !important;
     }
 
     .image {

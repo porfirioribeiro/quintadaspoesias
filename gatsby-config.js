@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Stellar by HTML5 UP',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js Starter based on Stellar by HTML5 UP',
+    title: 'Quinta das Poesias',
+    author: 'Porfirio Ribeiro',
+    description: 'Produção e comércio de doces e licores tradicionais',
+    siteUrl: `https://quintadaspoesias.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -15,6 +16,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,6 +27,12 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-139042200-1',
       },
     },
     'gatsby-plugin-typescript',

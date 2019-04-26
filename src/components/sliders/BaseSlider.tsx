@@ -19,8 +19,10 @@ export const SliderImage = graphql`
             src
             base64
           }
-          big: fixed {
+          original {
             src
+            width
+            height
           }
         }
       }
@@ -36,23 +38,17 @@ interface PicSliderProps extends CarouselProps {
 interface Popup {
   src: string;
   title: string;
+  width: number;
+  height: number;
 }
 
 export default function PicSlider({ edges, name, ...props }: PropsWithChildren<PicSliderProps>) {
   const slideTexts = (t as any)[name] || {};
   const [isShown, setShown] = useState(false);
-  const [popup, setPopUpSrc] = useState<Popup>();
+  const [popup, setPopUp] = useState<Popup>();
 
   const ref = useRef<any>();
   useEffect(() => listenToIntersections(ref.current.frame, () => setShown(true)), []);
-
-  function handleClick(e: React.MouseEvent<HTMLImageElement>) {
-    setPopUpSrc({ src: e.currentTarget.dataset.bigSrc!, title: e.currentTarget.title });
-  }
-
-  function handleClose() {
-    setPopUpSrc(undefined);
-  }
 
   return (
     <React.Fragment>
@@ -75,15 +71,31 @@ export default function PicSlider({ edges, name, ...props }: PropsWithChildren<P
         )}
         {...props}
       >
-        {edges.map((e: any) => {
+        {edges.map((edge: any) => {
           return (
             <img
-              key={e.node.name}
-              alt={slideTexts[e.node.name]}
-              title={slideTexts[e.node.name]}
-              src={e.node.childImageSharp.fixed[isShown ? 'src' : 'base64']}
-              onClick={handleClick}
-              data-big-src={e.node.childImageSharp.big.src}
+              key={edge.node.name}
+              alt={slideTexts[edge.node.name]}
+              title={slideTexts[edge.node.name]}
+              src={edge.node.childImageSharp.fixed[isShown ? 'src' : 'base64']}
+              onClick={() => {
+                const title = slideTexts[edge.node.name];
+                const { src, width, height } = edge.node.childImageSharp.original;
+                const img = new Image();
+                img.src = edge.node.childImageSharp.original.src;
+                if (!img.width) {
+                  setPopUp({
+                    src: edge.node.childImageSharp.fixed.src,
+                    width,
+                    height,
+                    title,
+                  });
+
+                  img.onload = () => setPopUp({ src, width, height, title });
+                } else {
+                  setPopUp({ src, width, height, title });
+                }
+              }}
             />
           );
         })}
@@ -95,7 +107,7 @@ export default function PicSlider({ edges, name, ...props }: PropsWithChildren<P
         unmountOnExit
         mountOnEnter
       >
-        <div className="spotlight_slider_popup" onClick={handleClose}>
+        <div className="spotlight_slider_popup" onClick={() => setPopUp(undefined)}>
           <div className="spotlight_slider_popup_in">
             <img {...popup} />
             <h4>{popup && popup.title}</h4>

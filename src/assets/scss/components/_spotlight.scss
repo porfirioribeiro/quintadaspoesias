@@ -69,6 +69,7 @@
       img {
         max-width: 98vw;
         max-height: calc(98vh - 48px);
+        object-fit: contain;
       }
     }
 

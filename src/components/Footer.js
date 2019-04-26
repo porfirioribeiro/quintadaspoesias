@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebookF } from 'react-icons/fa';
 
+import acb from '../assets/images/alcobaca.svg';
+
 const Footer = props => (
   <footer id="footer">
     <section>
@@ -10,6 +12,7 @@ const Footer = props => (
         seguindo receitas antigas deixadas pelos seus antepassados. Doces, compotas, mel e licores
         fazem parte do leque de produtos que produzimos e comercializamos.
       </p>
+      <img src={acb} className="footer-acb" />
       {/* <ul className="actions">
         <li>
           <Link to="/generic" className="button">

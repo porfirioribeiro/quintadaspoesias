@@ -21,11 +21,17 @@ export default function Index() {
   return (
     <Layout>
       <Helmet
-        title="Quinta das Poesias"
+        title="Quinta das Poesias - Produção e comércio de doces e licores tradicionais."
         meta={[
           {
             name: 'description',
-            content: 'Comercio de doces e licores tradicionais',
+            content:
+              'Fabricamos de diversos produtos tradicionais, desde doces, compotas e marmeladas a mel, frutos em cada e pêras bêbedas e Licor de Ginja: Wild Cherry',
+          },
+          {
+            name: 'keywords',
+            content:
+              'Quinta das Poesias, Casa Pereira, Wild Cherry, Monte Azul, doces, compotas, mel, azeite, licor de ginja, ginja, ginjinha, marmelada, pêras bêbedas',
           },
         ]}
         htmlAttributes={{ lang: 'pt' }}

@@ -6,7 +6,17 @@ module.exports = {
     siteUrl: `https://quintadaspoesias.com`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Source Sans Pro`,
+            variants: [`400`, `300`],
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,6 +26,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-react-helmet',
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,

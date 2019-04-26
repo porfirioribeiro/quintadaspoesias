@@ -8,7 +8,7 @@ const Header = props => (
       <img src={logo} alt="Logotipo Quinta das Poesias" />
     </span>
     <h1>Quinta das Poesias</h1>
-    <p>Produção e comércio de doces e licores.</p>
+    <p>Produção e comércio de doces e licores tradicionais.</p>
   </header>
 );
 

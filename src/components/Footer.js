@@ -39,7 +39,12 @@ const Footer = props => (
           </a>
         </li> */}
         <li>
-          <a href="https://facebook.com/quintadaspoesias" className="icon alt">
+          <a
+            href="https://facebook.com/quintadaspoesias"
+            className="icon alt"
+            title="Facebook"
+            aria-label="Facebook"
+          >
             <FaFacebookF />
             {/* <span className="label">Facebook</span> */}
           </a>

@@ -1,35 +1,18 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import PicSlider from '../PicSlider';
-import { Img } from '../Img';
+import PicSlider from './BaseSlider';
 
 export function MarmHomeSlider() {
-  const { allFile } = useStaticQuery(graphql`
+  const q = useStaticQuery(graphql`
     {
       allFile(
         sort: { fields: name, order: ASC }
         filter: { relativeDirectory: { eq: "marm-qp" } }
       ) {
-        edges {
-          node {
-            id
-            name
-            childImageSharp {
-              fixed(height: 200) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
+        ...SliderImage
       }
     }
   `);
 
-  return (
-    <PicSlider>
-      {allFile.edges.map((e: any) => (
-        <Img key={e.node.id} alt={e.node.name} fixed={e.node.childImageSharp.fixed} />
-      ))}
-    </PicSlider>
-  );
+  return <PicSlider name="marm-qp" edges={q.allFile.edges} />;
 }

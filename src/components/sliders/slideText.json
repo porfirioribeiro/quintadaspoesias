@@ -1,0 +1,38 @@
+{
+  "doces-qp": {
+    "30g": "Doces diversos 30g",
+    "100g": "Doces diversos 100g",
+    "angelshair": "Doce de Gila 240g",
+    "apple": "Doce de Maçã de Alcobaça 240g",
+    "fig": "Doce de Figo 240g",
+    "melon": "Doce de Melão 240g",
+    "orange": "Doce de Laranja 240g",
+    "peach": "Doce de Pêssego 240g",
+    "plum": "Doce de Ameixa 240g",
+    "pumpkin": "Doce de Abóbora 240g",
+    "pumpkinnuts": "Doce de Abóbora com Noz 240g",
+    "quince": "Doce de Marmelo 240g",
+    "rennetapple": "Doce de Maçã Reineta 240g",
+    "rochapear": "Doce de Pêra Rocha 240g",
+    "strawberry": "Doce de Morango 240g",
+    "tomato": "Doce de Tomate 240g"
+  },
+  "pack-qp": {
+    "pack4x100": "Pack com 4 doces de 100g",
+    "pack6x30": "Pack com 6 doces de 30g",
+    "pack2240": "Pack com 2 doces de 240g",
+    "woodset2": "Galheteiro com 2 doces de 100g"
+  },
+  "pots-qp": {
+    "drunkenpears": "Pêras Bêbedas 400g",
+    "pearsinsyrup": "Pêras em Calda 400g",
+    "honey": "Mel de nectar 480g",
+    "honeynuts": "Mel de nectar com avelãs 480g"
+  },
+  "marm-qp": {
+    "marm400": "Marmelada de Marmelo 400g",
+    "marm180": "Marmelada de Marmelo 180g",
+    "marmrein400": "Marmelada de Maçã Reineta 400g",
+    "marmrein180": "Marmelada de Maçã Reineta 180g"
+  }
+}

@@ -13,6 +13,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.2",
     "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-sitemap": "^2.0.12",
@@ -27,7 +28,6 @@
     "react-icons": "^3.6.1",
     "react-scroll-to-element": "^0.2.0",
     "react-scrollspy": "^3.3.5",
-    "react-spring": "^8.0.19",
     "react-transition-group": "^4.0.0",
     "react-waypoint": "^9.0.2"
   },
